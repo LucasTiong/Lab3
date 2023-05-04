@@ -40,3 +40,9 @@ def test_bubble_sort_no_numbers():
     result = Lab3.bubble_sort(input_arr, Lab3.SORT_ASCENDING)
 
     assert (result == 0)
+
+def test_bubble_sort_integer():
+    input_arr = [64, 34, 25, 12, 22, 11, 90.0]
+    result = Lab3.bubble_sort(input_arr, Lab3.SORT_ASCENDING)
+
+    assert (result == 2)
