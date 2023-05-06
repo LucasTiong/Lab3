@@ -15,21 +15,24 @@ def get_employees_by_age_range(age_lower_limit, age_upper_limit):
     for item in employee_data:
         if int(item["age"]) > int(age_lower_limit) and int(item["age"]) < int(age_upper_limit):
             result.append(item)
-
+    print(result)
     return result
 
 def calculate_average_salary():
     total = 0
     average = 0
-
+    n = 0
     #add your implementation to calculate here
-
-
+    for item in employee_data:
+        total = total + item["salary"]
+    average = total / 5
     return average
 
 def get_employees_by_dept(department):
     result = []
-
+    for item in employee_data:
+        if item["department"] == department:
+            result.append(item)
     # Add your implementation from here
 
 
@@ -85,9 +88,9 @@ def display_main_menu():
         quit()
 
 def main():
-
-    while (True):
-        display_main_menu()
+    get_employees_by_age_range(24,38)
+    #while (True):
+        #display_main_menu()
 
 
 if __name__ == "__main__":
